@@ -13,9 +13,9 @@ class QsbkspiderSpider(scrapy.Spider):
 
     def parse(self, response):
         jrlist = response.xpath("//div[@class='j-r-list']/ul/li")
-        print("************************************************************")
+        # print("************************************************************")
         print(type(jrlist))
-        print("************************************************************")
+        # print("************************************************************")
         for jrlistli in jrlist:
             author = jrlistli.xpath(".//div[@class='j-list-user']//div[@class='u-txt']//a/text()").get()
             content = jrlistli.xpath(".//div[@class='j-r-list-c']//div[@class='j-r-list-c-desc']//a/text()").get()
